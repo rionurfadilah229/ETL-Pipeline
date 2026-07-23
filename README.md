@@ -1,27 +1,27 @@
 # ETL Pipeline Project
 
-Project ini adalah contoh implementasi ETL sederhana menggunakan Python, Apache Airflow, dan PostgreSQL untuk mengambil, membersihkan, dan menyimpan data buku dari Open Library API.
+This project is a simple ETL implementation using Python, Apache Airflow, and PostgreSQL to extract, clean, and store book data from the Open Library API.
 
 ## Overview
-Proyek ini menunjukkan alur kerja data engineering dasar yang mencakup:
-- ekstraksi data dari sumber eksternal
-- transformasi dan pembersihan data
-- loading data ke database relasional
-- orkestrasi proses menggunakan Airflow
+This project demonstrates a basic data engineering workflow that includes:
+- extracting data from an external source
+- transforming and cleaning the data
+- loading the data into a relational database
+- orchestrating the process using Airflow
 
-## Output ETL dalam Konteks Kerjaan
-Hasil dari pipeline ini adalah data buku yang telah diproses dan siap digunakan untuk kebutuhan bisnis maupun analitik, seperti:
-- data terstruktur untuk laporan dan dashboard
-- data yang tersimpan di PostgreSQL untuk kebutuhan query dan analisis
-- pipeline otomatis yang memudahkan proses pengolahan data secara berulang
+## ETL Output 
+The output of this pipeline is processed book data that is ready to be used for business and analytical purposes, such as:
+- structured data for reporting and dashboards
+- data stored in PostgreSQL for querying and analysis
+- an automated pipeline that simplifies repeated data processing tasks
 
-Dengan demikian, project ini merepresentasikan alur ETL yang berguna untuk mendukung pengambilan keputusan, analisis data, dan otomasi proses data.
+In this way, the project represents an ETL workflow that supports decision-making, data analysis, and data automation.
 
 ## Project Structure
-- [extract_and_cleaning_data.py](extract_and_cleaning_data.py) — script standalone untuk ekstraksi dan pembersihan data
-- [airflow/dags/dags_etl.py](airflow/dags/dags_etl.py) — DAG Airflow untuk menjalankan pipeline ETL
-- [airflow/dags/files/create_table.sql](airflow/dags/files/create_table.sql) — SQL untuk membuat tabel di PostgreSQL
-- [compose.yml](compose.yml) — konfigurasi Docker Compose untuk menjalankan Airflow dan PostgreSQL
+- [extract_and_cleaning_data.py](extract_and_cleaning_data.py) — standalone script for extracting and cleaning data
+- [airflow/dags/dags_etl.py](airflow/dags/dags_etl.py) — Airflow DAG for running the ETL pipeline
+- [airflow/dags/files/create_table.sql](airflow/dags/files/create_table.sql) — SQL script to create tables in PostgreSQL
+- [compose.yml](compose.yml) — Docker Compose configuration for running Airflow and PostgreSQL
 
 ## Tech Stack
 - Python
@@ -32,7 +32,7 @@ Dengan demikian, project ini merepresentasikan alur ETL yang berguna untuk mendu
 
 ## Getting Started
 
-### 1. Create virtual environment
+### 1. Create a virtual environment
 ```bash
 python -m venv myvenv
 source myvenv/bin/activate
@@ -48,7 +48,7 @@ pip install -r requirements.txt
 docker compose up -d
 ```
 
-### 4. Access Airflow UI
+### 4. Access the Airflow UI
 Open your browser and go to:
 ```text
 http://localhost:8080
