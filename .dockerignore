@@ -1,0 +1,11 @@
+.git
+.gitignore
+__pycache__/
+*.py[cod]
+myvenv/
+venv/
+.venv/
+.env
+.env.*
+airflow/logs/
+airflow/airflow-webserver.pid
